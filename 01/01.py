@@ -1,14 +1,11 @@
 def input():
     L1, L2 = [], []
     with open("input 01.txt") as f:
-
-        for i in f:
-            f.seek(0)
-
-            lines = f.read().split("\n")
-            for i in range(len(lines)):
-                L1.append(int(lines[i].split("  ")[0]))
-                L2.append(int(lines[i].split("  ")[1]))
+        f.seek(0)
+        lines = f.read().split("\n")
+        for i in range(len(lines)):
+            L1.append(int(lines[i].split("  ")[0]))
+            L2.append(int(lines[i].split("  ")[1]))
     return L1, L2
 
 
@@ -36,6 +33,7 @@ def NumberOccurancesInList(N1,L2):
     return count
 
 L1 ,L2 = input()
+print(L1)
 print(NumberTimesOccurances(L1,L2))
 
 
